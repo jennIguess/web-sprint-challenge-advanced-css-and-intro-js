@@ -237,12 +237,18 @@ function getArtistByIndex(artists, id) {
 
 
 /* Task 4: Create a function called get20s() that takes data as an argument and returns an array with names of artists who were born the 20th century (1900-2000) */
+let TwentiethCentury = [];
+function get20s(artists){
+  for (i = 0; i < artists.length; i++){
+    if (artists[i].years.slice(0, 4) > 1900){TwentiethCentury.push(artists[i].name);};
 
-function get20s(/* Code here */){
-
-  /* Code here */
-
+  }
+  
+  return TwentiethCentury;
+  
 }
+
+
 
 
 /* Task 5: Create a function called `removeArtist` that takes two arguments:
@@ -299,9 +305,9 @@ For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte
 
 function lotsOfArt(artists){
 
-  var moreThan = artists.filter(artists) {
+  var moreThan = artists.filter((artists) => {
     return artists.paintings > 100;
-  };
+  });
 }
 
 
